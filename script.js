@@ -131,3 +131,62 @@ console.log(first);
 console.log(second);
 console.log(third);
 console.log(rest);
+
+
+const fruits = ["Apple", "Banana", "Mango", "Orange"]
+const [ , fruit1, , fruit2] = fruits
+console.log(fruit1);
+console.log(fruit2);
+ 
+const user = { firstName: "John", lastName: "Doe", age: 30 };
+const {firstName : name1, lastName : name2} = user;
+console.log(name1);
+console.log(name2);
+
+
+const profile = {
+    name: "Amit",
+    contact: {
+        phone: "123-456-7890",
+        email: "amit@example.com"
+    }
+};
+
+const { name, contact: { phone, email } } = profile;
+
+console.log(name);     
+console.log(phone);    
+console.log(email);    
+
+
+const numbers = [10, 20, 30, 40, 50]
+const [first, second, ...rest] = numbers
+console.log(first);
+console.log(second);
+console.log(rest);
+
+const user = { name: "Rohit", age: 25 }
+const{name, age, country = "India" } = user
+console.log(name);
+console.log(age);
+console.log(country);
+
+
+const arr1 = [1, 2, 3]
+const arr2 = [4, 5, 6]
+
+const mergedArray = [...arr1, ...arr2];
+console.log(mergedArray);
+
+
+function showProfile({ name, age }) {
+    console.log("Name: " + name);
+    console.log("Age: " + age);
+}
+
+showProfile({ name: "Rohit", age: 25 });
+
+
+const person = { name: "Nina", age: 28 }
+const newPerson = {...person, country: "India"}
+console.log(newPerson);
