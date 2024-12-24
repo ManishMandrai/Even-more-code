@@ -38,3 +38,35 @@ const arr1 = [1,2,3]
 const arr2 = [8,7,6]
 const combinedArr = [...arr1, ...arr2];
 console.log(combinedArr);
+
+
+const numbers = [10, 20, 30, 40, 50];
+const newNumbers = [...numbers, 60, 70, 80]
+console.log(newNumbers);
+
+const person = {name:"json",age : 23};
+const updatePerson = {...person, country: "usa", age :45}
+console.log(updatePerson);
+
+const employee = {name:"Alice", positon:"SDE3", salery: 180000};
+const {name, ...details} = employee;
+console.log(name);
+console.log(details);
+
+
+function multiply(...numbers) {
+    return numbers.reduce((acc, num) => acc * num, 1);
+}
+console.log(multiply(2, 3, 4));
+console.log(multiply(2, 4, 6, 7));
+
+
+const arr1 = [1, 3, 5, 6]
+const arr2 = [4, 8, 6, 3]
+const mergedArray = [...arr1, ...arr2];
+console.log(mergedArray);
+
+
+const car = { make: "Toyata", model: "innova", year : 2022 };
+const newCar = {...car, color: "black"}
+console.log(newCar);
