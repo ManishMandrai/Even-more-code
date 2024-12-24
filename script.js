@@ -62,3 +62,72 @@ console.log(nation);
 const user = { name: "Rohit", age: 25 };
 const {name, age, city = "Delhi"} = user;
 console.log(city);
+
+
+const person = {
+    name : "Amit",
+    age : 30,
+    hobbies : ["Reading", "coding", "sexting"]
+}
+const {name, age, hobbies : [firstHobby, secondHobby]} = person;
+
+console.log(name);
+console.log(age);
+console.log(firstHobby);
+console.log(secondHobby);
+
+
+function displayInfo({name, age, country = "India"}){
+    console.log(`Name:${name}, age:${age} country:${country}`);   
+}
+const person = {name : 'Ravi', age :34 }
+console.log(person);
+
+const students = [
+    {name:"Kali", age: 23},
+    {name:"Mike", age: 24},
+    {name:"Jhon", age: 22}
+]
+students.forEach(({name, age}) => {
+    console.log(`${name} is ${age} years old`);
+    
+})
+
+const person = {
+    name: "Nina",
+    contact: {
+        phone: "123-456-7890",
+        email: "nina@example.com"
+    }
+};
+
+const { name, contact: { phone, email } } = person;
+
+console.log(name);     
+console.log(phone);    
+console.log(email);    
+
+
+
+const myMap =  new Map();
+myMap.set ("name", "Alice");
+myMap.set("age", 23)
+
+for (let [key, value] of myMap){
+    console.log(`${key} : ${value}`);
+    
+}
+
+const mySet = new Set([1,2,3,4]);
+
+for(let value of mySet){
+    console.log(value);
+    
+}
+
+const data = [1, [2, 3], 4, 5, 34, 34, 4,456, 76,4, 3543];
+const [first,[second, third], ...rest] = data;
+console.log(first);
+console.log(second);
+console.log(third);
+console.log(rest);
